@@ -17,7 +17,7 @@ import Col from 'react-bootstrap/Col';
 
 //Axios
 import axios from 'axios'
-import Button from '../UI/Button';
+import MainButton from '../UI/MainButton';
 
 const Header = () => {
 
@@ -84,6 +84,7 @@ const Header = () => {
         //fetch data again with new units
         setUnitIsChanged(true);
     }
+    // console.log(weatherData);
 
   return (
     
@@ -112,7 +113,7 @@ const Header = () => {
 
                  </div>
                  <div className='bottonContainer'>
-                    <Button btnName="BOOK NOW" />
+                    <MainButton btnName="BOOK NOW" />
 
                  </div>
     

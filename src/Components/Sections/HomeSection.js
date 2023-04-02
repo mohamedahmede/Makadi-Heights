@@ -8,18 +8,19 @@ import './HomeSection.scss'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import SubButton from '../UI/SubButton';
 
 const HomeSection = () => {
   return (
     <>
-        <Container fluid className='HomeSectionContainer '>
+        <Container fluid className='homeSectionContainer '>
             <Row className=''>
             <Col >
             <Header />
 
             </Col>
             </Row>
-            <Row className='homeInfo position-absolute'>
+            <Row className='homeInfo'>
                 <Col>
                     <img src={CouplesImg} className='couplesImg' alt='Couples Photo'/>
                 </Col>
@@ -27,6 +28,14 @@ const HomeSection = () => {
                     <h1>The place <br/>We call home</h1>
                     <p>Makadi Heights is a town built over 3.4 million square meters planned for development, with an elevation reaching 78 meters above sea level guaranteeing magnificent panoramic sea views residential units. 
     Envisioned as a comprehensive town.</p>
+                    <Row>
+                        <Col>
+                            <SubButton name='DOWNLOAD BROCHURE'/>
+                        </Col>
+                        <Col>
+                            <SubButton name='SHOW MASTER PLAN'/>
+                        </Col>
+                    </Row>
                 </Col>
             </Row>
         </Container>

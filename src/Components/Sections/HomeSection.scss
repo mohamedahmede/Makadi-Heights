@@ -1,18 +1,18 @@
 // include customized bootstrap
 @import '../../scss/config';
 
-.HomeSectionContainer {
+.homeSectionContainer {
 
     background-color: #21436E;
     background-image: url("../../images/Makadi_Heights_Home_Section.png");
     background-repeat: no-repeat;
     background-size: 100%;
     color: #ffff;
-    height: 60rem;
     padding: $section-padding;
 
     .homeInfo{
-        bottom: -140px;
+        // bottom: -140px;
+        padding-top: 40%;
         .couplesImg{
             height: 30rem;
         }

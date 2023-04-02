@@ -1,11 +1,11 @@
 import React from 'react';
 
-import './Button.scss';
+import './MainButton.scss';
 
-const Button = (props) => {
+const MainButton = (props) => {
   return (
     <button className='button'>{props.btnName}</button>
   )
 }
 
-export default Button
+export default MainButton
