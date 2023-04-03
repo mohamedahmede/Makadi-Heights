@@ -76,9 +76,9 @@ const ControlledCarousel = forwardRef((props,ref)=>{
   const [index, setIndex] = useState(0);
 
 useImperativeHandle(ref,()=>({
-  setIndexFromParent(index){
-    // alert(index);
-    setIndex(index);
+  setIndexFromParent(parentIndex){
+    // todo active for dots 
+    setIndex(parentIndex);
   }
 }));
   const handleSelect = (selectedIndex, e) => {

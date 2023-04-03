@@ -13,6 +13,8 @@ const LifestyleSection = () => {
 
   const carouselRef= useRef();
   const handleClick = (index) => {
+    // todo set class for active css
+
     carouselRef.current.setIndexFromParent(index);
   }
   return (
