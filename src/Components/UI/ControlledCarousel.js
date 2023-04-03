@@ -82,7 +82,7 @@ useImperativeHandle(ref,()=>({
   }
 }));
   const handleSelect = (selectedIndex, e) => {
-    alert(selectedIndex);
+    // alert(selectedIndex);
     setIndex(selectedIndex);
   };
 
@@ -128,27 +128,7 @@ useImperativeHandle(ref,()=>({
         </Carousel.Item>
       </Carousel>
 
-      <div class="carousel-indicators">
-        <button
-          type="button"
-          data-bs-target=""
-          aria-label="Slide 1"
-          aria-current="false"
-        ></button>
-        <button
-          type="button"
-          data-bs-target=""
-          aria-label="Slide 2"
-          aria-current="true"
-          class="active"
-        ></button>
-        <button
-          type="button"
-          data-bs-target=""
-          aria-label="Slide 3"
-          aria-current="false"
-        ></button>
-      </div>
+     
     </>
   );
 })

@@ -18,7 +18,7 @@ const LifestyleSection = () => {
   return (
     <>
       <Container fluid className='lifestyleSectionContainer'>
-        <Row className=''>
+        <Row>
           <Col>
             <h1>
               Discover Lifestyle <span>Amentities</span>
