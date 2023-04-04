@@ -1,12 +1,50 @@
-@import '../../scss/config';
-
+@import "../../scss/config";
 
 .lifestyleSectionContainer {
-    background-color: #fff;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: #fff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: $section-padding;
+  padding-top: 8.75rem;
+  padding-bottom: 8.75rem;
 
-    padding: $section-padding;
+  .leftSide {
+    .iconTitle {
+      font-family: $font-main;
+      font-size: 18px;
+      color: #268fb4;
+      line-height: 25px;
+    }
 
+    .iconSubText {
+      font-size: 16px;
+      line-height: 23px;
+      font-family: "Sharp Sans No1 Medium Italic";
+
+    }
+    padding-right: 40px;
+    .lifestyleTitle {
+      font-family: $font-main;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 3.125rem;
+      line-height: 2.375rem;
+      color: #21436e;
+      span {
+        font-size: 6.502rem;
+        line-height: 5.5rem;
+      }
+    }
+    .subSentence {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 29px;
+      color: #21436e;
+      padding-top: 40px;
+    }
+  }
+
+  .carousel{
+    padding: 90px 40px;
+  }
 }
-
-

@@ -1,1 +1,23 @@
-$section-padding: 70px 134px;
+@font-face {
+  font-family: "Sharp Sans No1 Medium Italic";
+  src: url("//db.onlinewebfonts.com/t/59e7605c0e625de0522a548ac1a15d91.eot");
+  src: url("//db.onlinewebfonts.com/t/59e7605c0e625de0522a548ac1a15d91.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/59e7605c0e625de0522a548ac1a15d91.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/59e7605c0e625de0522a548ac1a15d91.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/59e7605c0e625de0522a548ac1a15d91.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/59e7605c0e625de0522a548ac1a15d91.svg#Sharp Sans No1 Medium Italic")
+      format("svg");
+}
+
+@font-face {
+  font-family: 'Diodrum Arabic';
+  src: url("../fonts/Diodrum\ Arabic\ Medium.ttf") format("truetype");
+}
+$font-main: 'Diodrum Arabic', sans-serif;
+
+
+$section-padding: 4.375rem 8.375rem;

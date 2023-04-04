@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useFormik } from "formik";
 import { formSchema } from "../../schemas/index";
 import FormImg from "../../images/FormImg.png";
@@ -7,23 +7,37 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import { TextField } from "@mui/material";
-
+import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDownOutlined';
+import ExpandMoreOutlinedIcon from '@mui/icons-material/ExpandMoreOutlined';
+import ExpandMoreSharpIcon from '@mui/icons-material/ExpandMoreSharp';
 import "./FormSection.scss";
 
 //Bootstrap
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import FormModal from "../UI/FormModal";
 
-const onSubmit = async (values, actions) => {
-  console.log(values);
-  console.log(actions);
-  await new Promise((resolve) => setTimeout(resolve, 1000));
-  actions.resetForm();
-  console.log("submitted");
-};
+
 
 const FormSection = () => {
+
+  const modalRef= useRef();
+
+  const onSubmit = async (values, actions) => {
+    // console.log(values);
+    // console.log(actions);
+
+    //Reset check Box Icon as it doesnot reset with formik reset
+    document.getElementById("FAQ").checked = false;
+    //reset rest of the form
+    actions.resetForm();
+    console.log("submitted");
+    //send values to the Modal to be displayed
+    modalRef.current.handleShowInParent(values)
+  
+  };
+
   const {
     values,
     errors,
@@ -49,15 +63,17 @@ const FormSection = () => {
 
   return (
     <>
+  
       <Container fluid className="formSectionContainer">
-        <Row className="w-100">
-          <Col md={4}>
-            <img src={FormImg} className="w-100" alt="A Happy Girl" />
+      <FormModal ref={modalRef}/>
+        <Row >
+          <Col lg={4} md={6}  className="imgCol bg-image">
+           
           </Col>
-          <Col md={8}>
+          <Col lg={8} md={6} >
             <form onSubmit={handleSubmit} className="contactForm">
-              <p>
-                Enter your details and our representative will get back to you
+              <p className="formHeader">
+                Enter your details and our representative <br /> will get back to you
                 shortly
               </p>
               <TextField
@@ -137,6 +153,8 @@ const FormSection = () => {
                   InputLabelProps={{
                     className: "inputFieldLabel",
                   }}
+                  IconComponent = {ExpandMoreSharpIcon}
+                  
                 >
                   <MenuItem value="">
                     <em>None</em>
@@ -172,16 +190,24 @@ const FormSection = () => {
               )}
 
               <div className="FAQ">
-                <label >
+                
                   <input
+                    className="FAQCheckbox"
                     name="FAQ"
                     type="checkbox"
                     onChange={handleChange}
                     value="true"
+                    id="FAQ"
+                    
                   />
-                  I agree to the processing of personal data
+                  <label htmlFor="FAQ" >
+                I agree to the processing of personal data
                 </label>
+                 
               </div>
+              {errors.FAQ && touched.FAQ && (
+                <p className="errorMessage">{errors.FAQ}</p>
+              )}
 
               <div>
                 <button

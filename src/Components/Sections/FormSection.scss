@@ -3,34 +3,50 @@
 .formSectionContainer {
   background-color: rgba(237, 237, 237, 0.5);
   padding: 0;
+  overflow: hidden;
+
+  .imgCol{
+    background-image: url("../../images/FormImg.png");
+    background-repeat: no-repeat;
+    
+  }
+
+  
 
   .contactForm {
-    padding: 30px;
-    .inputField {
-      width: 100%;
-      padding: 10px 0px;
-      //   outline: none;
-      //   border: none;
-      //   border-bottom: 1px solid #646464;
-      //   background-color: transparent;
-    }
-    .inputFieldLabel {
-      /* Chrome, Firefox, Opera, Safari 10.1+ */
+    padding: 6.25rem 2.5rem 6.25rem 5rem;
+    // background-color: rgba(237, 237, 237,0.5);
+
+    .formHeader{
       color: #21436e;
+      font-size: 1.125rem;
       font-weight: 600;
-      font-size: 16px;
-      line-height: 25px;
-      opacity: 80%; /* Firefox */
     }
+    .inputField {
+      width: 90%;
+      padding: 10px 0px;
+      
+    }
+
 
     //changes color of text in all inputs
     .MuiInputLabel-root {
       color: #21436e !important;
       font-weight: 600;
-      font-size: 16px;
+      font-size: 1rem;
       line-height: 25px;
-      opacity: 80%; /* Firefox */
+      opacity: 80%; 
+      font-family: "Sharp Sans No1 Medium italic";
+
     }
+  .css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon
+  {
+    font-size: 3.125rem;
+    color: #646464;
+    opacity: 0.4;
+
+  }
+    
   }
   .errorMessage {
     color: #b30000;
@@ -59,11 +75,25 @@
   }
 
   .FAQ {
-    padding: 10px;
+    display: flex;
+    padding: 30px 0px;
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
     line-height: 25px;
     color: #646464;
+    .FAQCheckbox{
+      
+      margin-right: 10px;
+    }
+  }
+}
+
+
+@media (max-width: 767px) {
+  .imgCol{
+    background-position: center;
+    width: 1000px;
+    height: 40rem;
   }
 }
