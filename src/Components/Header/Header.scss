@@ -1,7 +1,7 @@
 .logo {
     width: 155px;
 }
-.rightSide {
+.rightSideHeader {
     display: flex;
     .weatherInfo {
         display: flex;
@@ -36,3 +36,27 @@
     }
 }
 
+@media (max-width: 990px) {
+    .imgCol{
+      background-position: center;
+      width: 1000px;
+      height: 40rem;
+    }
+    .leftSideHeader{
+        display: flex;
+        justify-content: center !important;
+        .logo {
+            padding-bottom: 20px;
+            
+        }
+    }
+    
+    .rightSideHeader{
+        justify-content: center !important;
+        .temperature{
+           
+            padding-left: 0 !important;
+              
+        }
+    }
+  }

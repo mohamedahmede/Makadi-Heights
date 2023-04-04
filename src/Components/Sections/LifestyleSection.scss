@@ -48,3 +48,53 @@
     padding: 90px 40px;
   }
 }
+@media (max-width: 1200px) {
+  .lifestyleTitle {
+    font-size: 2.5rem !important;
+    span {
+      font-size: 3.5rem !important;
+      line-height: 2rem !important;
+    }
+  }
+  
+}
+
+@media (max-width: 880px) {
+  .lifestyleTitle {
+    font-size: 3rem !important;
+    span {
+      font-size: 4rem !important;
+      line-height: 3rem !important;
+    }
+  }
+  .subSentence {
+    
+    font-size: 14px;
+    line-height: 20px;
+    padding-top: 20px;
+  }
+  
+}
+
+@media (max-width: 550px) {
+  .lifestyleSectionContainer{
+    padding: 2rem 4rem;
+    .lifestyleTitle {
+      font-size: 3rem !important;
+      
+      span {
+        font-size: 4rem !important;
+        line-height: 3rem !important;
+      }
+    }
+    .subSentence {
+      
+      font-size: 14px;
+      line-height: 20px;
+      padding-top: 20px;
+    }
+  }
+ 
+  
+}
+

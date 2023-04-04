@@ -32,3 +32,85 @@
     }
   }
 }
+
+@media (max-width: 1200px) {
+ 
+
+  .homeSectionContainer {
+
+  
+    .homeInfo {
+      // padding-top: 40%;
+  
+      .couplesImg {
+        //
+      }
+      .pageTitle {
+        font-family: $font-main;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 3rem;
+        line-height: 3rem;
+        padding-bottom: 40px;
+      }
+      .pageTitleSubPara{
+        font-size: 15px;
+        line-height: 36px;
+      }
+      .subButton {
+        margin: 10px;
+        width: 90%;
+        font-size: smaller;
+      }
+    }
+  }
+  
+  
+}
+
+@media (max-width: 1200px) {
+ 
+
+  .homeSectionContainer {
+
+  
+    .homeInfo {
+      display: flex;
+      justify-content: center;
+      .imageContainer
+      {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 2rem;
+        .couplesImg {
+       
+          padding-right: 0;
+          width: auto;
+          height: 400px;
+          
+    
+        }
+      }
+      
+      .pageTitle {
+        font-family: $font-main;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 3rem;
+        line-height: 3rem;
+        padding-bottom: 40px;
+      }
+      .pageTitleSubPara{
+        font-size: 15px;
+        line-height: 36px;
+      }
+      .subButton {
+        margin: 10px;
+        width: 90%;
+        font-size: smaller;
+      }
+    }
+  }
+  
+  
+}

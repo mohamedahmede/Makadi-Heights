@@ -28,7 +28,7 @@ const LifestyleSection = () => {
     <>
       <Container fluid className='lifestyleSectionContainer'>
         <Row>
-          <Col className='leftSide'>
+          <Col md={6} sm={12} className='leftSide'>
             <h1 className='lifestyleTitle'>
               Discover Lifestyle<br />
               <span>Amentities</span>
@@ -87,7 +87,7 @@ const LifestyleSection = () => {
              
             </Row>
           </Col>
-          <Col >
+          <Col lg={6}>
               <ControlledCarousel ref={carouselRef} className='carousel' />
           </Col>
         </Row>

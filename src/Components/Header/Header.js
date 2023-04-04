@@ -90,10 +90,10 @@ const Header = () => {
     
     <Container>
         <Row>
-            <Col>
+            <Col  className="leftSideHeader">
                  <img src={Logo} alt='Makadi Heights Logo' className='logo'/>
             </Col>
-            <Col className='rightSide justify-content-end'>
+            <Col md={6} className='rightSideHeader justify-content-end'>
                  {/* <img 
                  src={`https://openweathermap.org/img/wn/${weatherData.weather[0].icon}.png`} 
                  alt='Current Weather in Makadi' 

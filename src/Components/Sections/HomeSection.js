@@ -21,10 +21,10 @@ const HomeSection = () => {
             </Col>
             </Row>
             <Row className='homeInfo'>
-                <Col md={6} sm={12}>
+                <Col lg={6} className="imageContainer">
                     <img src={CouplesImg} className='couplesImg' alt='Couples Photo'/>
                 </Col>
-                <Col md={6} sm={12}>
+                <Col md={6} >
                     <h1 className='pageTitle'>The place <br/>We call home</h1>
                     <p className='pageTitleSubPara'>Makadi Heights is a town built over 3.4 million square meters planned for development, with an elevation reaching 78 meters above sea level guaranteeing magnificent panoramic sea views residential units. 
     Envisioned as a comprehensive town.</p>
