@@ -111,9 +111,16 @@
   }
 }
 
+@media (max-width: 926px) {
+  .lifestyleSectionContainer .leftSide .iconCol {
+    padding: 0px;
+    margin: 0;
+}
+}
+
 @media (max-width: 880px) {
   .lifestyleSectionContainer {
-    padding: 2rem 4rem 2rem 5rem !important;
+    padding: 2rem 1rem 2rem 5rem !important;
     .lifestyleTitle {
       font-size: 2rem !important;
       span {
@@ -124,6 +131,7 @@
       line-height: 20px;
     }
   }
+  
 }
 
 @media (max-width: 767px) {
@@ -133,6 +141,8 @@
     }
     .iconCol {
       display: inline-block;
+      padding: 20px !important;
+
     }
   }
 }
