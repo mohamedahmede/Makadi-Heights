@@ -1,3 +1,5 @@
+
+
 @font-face {
   font-family: "Sharp Sans No1 Medium Italic";
   src: url("//db.onlinewebfonts.com/t/59e7605c0e625de0522a548ac1a15d91.eot");
@@ -18,6 +20,10 @@
   src: url("../fonts/Diodrum\ Arabic\ Medium.ttf") format("truetype");
 }
 $font-main: 'Diodrum Arabic', sans-serif;
+
+
+@import 'https://fonts.googleapis.com/css2?family=Shanti&display=swap';
+
 
 
 $section-padding: 4.375rem 8.375rem;
