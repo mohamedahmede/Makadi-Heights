@@ -28,7 +28,7 @@ useImperativeHandle(ref,()=>({
 
   return (
     <>
-      <Carousel activeIndex={index} onSelect={handleSelect} onSlide={handleSlide} controls={false} indicators={false} interval={1500}>
+      <Carousel activeIndex={index} onSelect={handleSelect} onSlide={handleSlide} controls={false} indicators={false} interval={1000}>
         <Carousel.Item>
           <img
             className="d-block"
