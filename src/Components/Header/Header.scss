@@ -60,3 +60,42 @@
         }
     }
   }
+
+
+  @media (max-width: 450px) {
+
+    .rightSideHeader{
+        padding: 20px;
+        .weatherInfo {
+            display: flex;
+            .weatherIcon {
+                display: flex;
+                color: #fff;
+                font-size: 30px;
+                font-weight: 400;
+         
+            }
+            .temperature{
+                align-items: center;
+                font-size: 15px;
+                padding-left: 10px;
+                  
+            }
+        }
+        .phoneIconContainer {
+            padding-left: 30px;
+            
+            .phoneIcon{
+                border-radius: 50%;
+                border: 1px solid white;
+                font-size: 12px;
+                padding: 10px;
+            }
+    
+            
+        }
+        .bottonContainer {
+            // padding-left: 50px;
+        }
+    }
+  }

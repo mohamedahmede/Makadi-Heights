@@ -114,3 +114,40 @@
   
   
 }
+
+@media (max-width: 600px) {
+ 
+
+  .homeSectionContainer {
+    padding: 4rem 4rem !important;
+  
+    .homeInfo {
+      
+      .imageContainer
+      {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 2rem;
+        .couplesImg {
+       
+          padding-right: 0;
+          width: 100%;
+          height: auto;
+          
+    
+        }
+      }
+      
+    
+  }
+}
+
+@media (max-width: 390px) {
+  .subButton {
+    margin: 10px;
+    width: 90%;
+    font-size:x-small !important;
+  }
+}
+  
+}

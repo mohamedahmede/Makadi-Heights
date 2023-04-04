@@ -23,7 +23,7 @@ useImperativeHandle(ref,()=>({
       <Carousel activeIndex={index} onSelect={handleSelect} controls={false} indicators={false}>
         <Carousel.Item>
           <img
-            className="d-block w-100"
+            className="d-block"
             src={sportsFacilities}
             alt="First slide"
           />
@@ -31,7 +31,7 @@ useImperativeHandle(ref,()=>({
         </Carousel.Item>
         <Carousel.Item>
           <img
-            className="d-block w-100"
+            className="d-block"
             src={sportsFacilities}
             alt="Second slide"
           />
@@ -40,7 +40,7 @@ useImperativeHandle(ref,()=>({
 
         <Carousel.Item>
           <img
-            className="d-block w-100"
+            className="d-block"
             src={sportsFacilities}
             alt="Third slide"
           />
@@ -48,14 +48,14 @@ useImperativeHandle(ref,()=>({
 
         <Carousel.Item>
           <img
-            className="d-block w-100"
+            className="d-block"
             src={sportsFacilities}
             alt="Fourth slide"
           />
         </Carousel.Item>
         <Carousel.Item>
           <img
-            className="d-block w-100"
+            className="d-block"
             src={sportsFacilities}
             alt="Fifth slide"
           />
@@ -63,7 +63,7 @@ useImperativeHandle(ref,()=>({
 
         <Carousel.Item>
           <img
-            className="d-block w-100"
+            className="d-block"
             src={sportsFacilities}
             alt="Sixth slide"
           />

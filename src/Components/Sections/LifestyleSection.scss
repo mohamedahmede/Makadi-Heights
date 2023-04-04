@@ -3,11 +3,14 @@
 .lifestyleSectionContainer {
   background-color: #fff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  padding: $section-padding;
+  padding: 4.375rem 3rem 4.375rem 8.375rem !important;
   padding-top: 8.75rem;
   padding-bottom: 8.75rem;
 
   .leftSide {
+    .iconCol {
+      padding: 20px;
+    }
     .iconTitle {
       font-family: $font-main;
       font-size: 18px;
@@ -19,7 +22,6 @@
       font-size: 16px;
       line-height: 23px;
       font-family: "Sharp Sans No1 Medium Italic";
-
     }
     padding-right: 40px;
     .lifestyleTitle {
@@ -44,57 +46,143 @@
     }
   }
 
-  .carousel{
+  .carousel {
     padding: 90px 40px;
   }
 }
 @media (max-width: 1200px) {
-  .lifestyleTitle {
-    font-size: 2.5rem !important;
-    span {
-      font-size: 3.5rem !important;
-      line-height: 2rem !important;
+  .lifestyleSectionContainer {
+    padding: 4.375rem 3rem 4.375rem 8.375rem !important;
+
+    .leftSide {
+      .iconCol {
+        padding-bottom: 5px;
+      }
+      .iconTitle {
+        font-family: $font-main;
+        font-size: 18px;
+        color: #268fb4;
+        line-height: 15px;
+      }
+
+      .iconSubText {
+        font-size: 16px;
+        line-height: 23px;
+        font-family: "Sharp Sans No1 Medium Italic";
+      }
+
+      .lifestyleTitle {
+        font-size: 2.5rem;
+        span {
+          font-size: 3.5rem;
+          line-height: 2rem !important;
+        }
+      }
+      .subSentence {
+        padding-top: 20px !important;
+        font-size: 14px !important;
+      }
     }
   }
-  
+}
+
+@media (max-width: 991px) {
+  .iconCol {
+    padding: 30px 10px 30px 0px;
+    display: flex;
+    align-items: center !important;
+    .iconTitle {
+      font-size: 16px !important;
+      padding-top: 10px;
+    }
+  }
+  .lastRow {
+    display: inline !important;
+  }
+
+  .iconSubText {
+    display: none;
+  }
 }
 
 @media (max-width: 880px) {
-  .lifestyleTitle {
-    font-size: 3rem !important;
-    span {
-      font-size: 4rem !important;
-      line-height: 3rem !important;
-    }
-  }
-  .subSentence {
-    
-    font-size: 14px;
-    line-height: 20px;
-    padding-top: 20px;
-  }
-  
-}
-
-@media (max-width: 550px) {
-  .lifestyleSectionContainer{
-    padding: 2rem 4rem;
+  .lifestyleSectionContainer {
+    padding: 2rem 4rem 2rem 5rem !important;
     .lifestyleTitle {
-      font-size: 3rem !important;
-      
+      font-size: 2rem !important;
       span {
-        font-size: 4rem !important;
-        line-height: 3rem !important;
+        font-size: 3rem !important;
       }
     }
     .subSentence {
-      
-      font-size: 14px;
       line-height: 20px;
-      padding-top: 20px;
     }
   }
- 
-  
 }
 
+@media (max-width: 767px) {
+  .lifestyleSectionContainer {
+    .leftSide {
+      display: contents;
+    }
+    .iconCol {
+      display: inline-block;
+    }
+  }
+}
+
+@media (max-width: 625px) {
+  .lifestyleSectionContainer{
+    padding: 5rem 1.2rem 5rem 1.2rem !important;
+  .leftSide {
+    display: block !important;
+  }
+}
+}
+
+@media (max-width: 550px) {
+  .lifestyleSectionContainer {
+    padding: 2rem 4rem;
+
+    .leftSide {
+      .lifestyleTitle {
+        font-size: 3rem !important;
+
+        span {
+          font-size: 4rem !important;
+          line-height: 3rem !important;
+        }
+      }
+      .subSentence {
+        font-size: 14px;
+        line-height: 20px;
+        padding-top: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .lifestyleSectionContainer {
+    padding: 2rem 1rem;
+
+    .leftSide {
+      .lifestyleTitle {
+        font-size: 2rem !important;
+
+        span {
+          font-size: 3rem !important;
+          line-height: 3rem !important;
+        }
+      }
+      .subSentence {
+        font-size: 12px;
+        line-height: 20px;
+        padding-top: 20px;
+      }
+    }
+    .carousel {
+      padding: 40px 0px;
+    }
+  }
+}

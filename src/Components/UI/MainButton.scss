@@ -9,3 +9,11 @@
     background-color: #21436E;
     color: #fff;
 }
+@media (max-width: 450px) {
+    .button {
+        font-size: 12px;
+        width: 100px;
+        height: 30px;
+    }
+
+}
