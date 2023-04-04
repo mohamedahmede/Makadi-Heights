@@ -15,15 +15,24 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 const LifestyleSection = () => {
-
+  
+  const [activeIndex, setActiveIndex] = useState("")
   const [isActive, setIsActive] = useState("false");
 
   const carouselRef= useRef();
   const handleClick = (index) => {
-    // todo set class for active css
 
     carouselRef.current.setIndexFromParent(index);
+    setActiveIndex(index);
   }
+
+  // setInterval(() => {
+  //   let ind = carouselRef.current.getCurrentIndex();
+  //   console.log(ind);
+  //   setActiveIndex(ind)
+  // }, 1500);
+
+  console.log(activeIndex);
   return (
     <>
       <Container fluid className='lifestyleSectionContainer'>
@@ -35,14 +44,14 @@ const LifestyleSection = () => {
             </h1>
             <p className='subSentence'>Occupying a land area of 33,000 square meters, Makadi Heights' stunning clubhouse</p>
             <Row>
-              <Col className='iconCol'>
+              <Col className={`iconCol${(activeIndex === 0) ? " isActive" : ""}`} >
                 <div className='text-center' onClick={() => {handleClick(0)}}>
                   <span className='iconTest'><img src={CommercialAreas}/></span>
                   <p className='iconTitle'>Commercial Areas</p>
                   <p className='iconSubText'>Downtown<br/>Makadi Heights Mall</p>
                 </div>
               </Col>
-              <Col className='iconCol'>  
+              <Col className={`iconCol${(activeIndex === 1) ? " isActive" : ""}`}>  
                 <div className='text-center' onClick={() => {handleClick(1)}}>
                   <span className='iconTest'><img src={SportsFacilities}/></span>
                   <p className='iconTitle'>Sports Facilities</p>
@@ -51,14 +60,14 @@ const LifestyleSection = () => {
               </Col>
             </Row>
             <Row>
-              <Col className='iconCol'>
+              <Col className={`iconCol${(activeIndex === 2) ? " isActive" : ""}`}>
                 <div className='text-center' onClick={() => {handleClick(2)}}>
                   <span className='iconTest'><img src={Kids}/></span>
                   <p className='iconTitle'>Kids Friendly Areas</p>
                   <p className='iconSubText'>Kids Aqua Park<br/>Kids Areas</p>
                 </div>
               </Col>
-              <Col className='iconCol'>
+              <Col className={`iconCol${(activeIndex === 3) ? " isActive" : ""}`}>
               <div className='text-center' onClick={() => {handleClick(3)}}>
                 <span className='iconTest'><img src={CentralPark}/></span>
                 <p className='iconTitle'>Central Park</p>
@@ -68,7 +77,7 @@ const LifestyleSection = () => {
             </Row>    
                 
             <Row>
-              <Col className='iconCol lastRow'>
+              <Col className={`iconCol lastRow${(activeIndex === 4) ? " isActive" : ""}`}>
               
               <div className='text-center' onClick={() => {handleClick(4)}}>
                 <span className='iconTest'><img src={Hotels}/></span>
@@ -76,7 +85,7 @@ const LifestyleSection = () => {
                 <p className='iconSubText'>Far far away, behind<br/>the word mountains</p>
               </div>
               </Col>
-              <Col className='iconCol lastRow'>
+              <Col className={`iconCol lastRow${(activeIndex === 5) ? " isActive" : ""}`}>
               <div className='text-center' onClick={() => {handleClick(5)}}>
                 <span className='iconTest'><img src={Medical}/></span>
                 <p className='iconTitle'>Medical Facilities</p>
@@ -87,7 +96,7 @@ const LifestyleSection = () => {
              
             </Row>
           </Col>
-          <Col lg={6} md={8} >
+          <Col lg={6} md={8}     >
               <ControlledCarousel ref={carouselRef} className='carousel' />
           </Col>
         </Row>

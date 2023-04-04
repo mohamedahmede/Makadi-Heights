@@ -6,11 +6,14 @@ import "./ControlledCarousel.scss"
 
 const ControlledCarousel = forwardRef((props,ref)=>{
   const [index, setIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
 useImperativeHandle(ref,()=>({
   setIndexFromParent(parentIndex){
-    // todo active for dots 
-    setIndex(parentIndex);
+  setIndex(parentIndex);
+  },
+  getCurrentIndex(){
+    return currentIndex;
   }
 }));
   const handleSelect = (selectedIndex, e) => {
@@ -18,9 +21,13 @@ useImperativeHandle(ref,()=>({
     setIndex(selectedIndex);
   };
 
+  const handleSlide = (index,e)=>{
+    setCurrentIndex(index);
+  }
+
   return (
     <>
-      <Carousel activeIndex={index} onSelect={handleSelect} controls={false} indicators={false}>
+      <Carousel activeIndex={index} onSelect={handleSelect} onSlide={handleSlide} controls={false} indicators={false} interval={null}>
         <Carousel.Item>
           <img
             className="d-block"
@@ -69,6 +76,17 @@ useImperativeHandle(ref,()=>({
           />
         </Carousel.Item>
       </Carousel>
+    {/* <div className="text-center">
+    <button className="carouselDots"></button>
+    <button className="carouselDots"></button>
+    <button className="carouselDots"></button>
+    <button className="carouselDots"></button>
+    <button className="carouselDots"></button>
+    <button className="carouselDots"></button>
+
+    </div> */}
+      
+
 
      
     </>
