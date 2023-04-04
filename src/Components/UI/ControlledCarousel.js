@@ -77,15 +77,15 @@ useImperativeHandle(ref,()=>({
           />
         </Carousel.Item>
       </Carousel>
-    {/* <div className="text-center">
-    <button className="carouselDots"></button>
-    <button className="carouselDots"></button>
-    <button className="carouselDots"></button>
-    <button className="carouselDots"></button>
-    <button className="carouselDots"></button>
-    <button className="carouselDots"></button>
+    <div className="text-center">
+    <button className={`carouselDots${(currentIndex === 0) ? " activeDot" : ""}`}></button>
+    <button className={`carouselDots${(currentIndex === 1) ? " activeDot" : ""}`}></button>
+    <button className={`carouselDots${(currentIndex === 2) ? " activeDot" : ""}`}></button>
+    <button className={`carouselDots${(currentIndex === 3) ? " activeDot" : ""}`}></button>
+    <button className={`carouselDots${(currentIndex === 4) ? " activeDot" : ""}`}></button>
+    <button className={`carouselDots${(currentIndex === 5) ? " activeDot" : ""}`}></button>
 
-    </div> */}
+    </div>
       
 
 
