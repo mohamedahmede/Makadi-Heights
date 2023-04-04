@@ -23,11 +23,12 @@ useImperativeHandle(ref,()=>({
 
   const handleSlide = (index,e)=>{
     setCurrentIndex(index);
+    props.setIsMoved(index);
   }
 
   return (
     <>
-      <Carousel activeIndex={index} onSelect={handleSelect} onSlide={handleSlide} controls={false} indicators={false} interval={null}>
+      <Carousel activeIndex={index} onSelect={handleSelect} onSlide={handleSlide} controls={false} indicators={false} interval={1500}>
         <Carousel.Item>
           <img
             className="d-block"

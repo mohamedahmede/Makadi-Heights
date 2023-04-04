@@ -17,7 +17,9 @@ import Col from 'react-bootstrap/Col';
 const LifestyleSection = () => {
   
   const [activeIndex, setActiveIndex] = useState("")
-  const [isActive, setIsActive] = useState("false");
+
+  //if the slide Moved
+  const [isMoved, setIsMoved] = useState(0);
 
   const carouselRef= useRef();
   const handleClick = (index) => {
@@ -44,14 +46,14 @@ const LifestyleSection = () => {
             </h1>
             <p className='subSentence'>Occupying a land area of 33,000 square meters, Makadi Heights' stunning clubhouse</p>
             <Row>
-              <Col className={`iconCol${(activeIndex === 0) ? " isActive" : ""}`} >
+              <Col className={`iconCol${(activeIndex === 0 || isMoved === 0) ? " isActive" : ""}`} >
                 <div className='text-center' onClick={() => {handleClick(0)}}>
                   <span className='iconTest'><img src={CommercialAreas}/></span>
                   <p className='iconTitle'>Commercial Areas</p>
                   <p className='iconSubText'>Downtown<br/>Makadi Heights Mall</p>
                 </div>
               </Col>
-              <Col className={`iconCol${(activeIndex === 1) ? " isActive" : ""}`}>  
+              <Col className={`iconCol${(activeIndex === 1 || isMoved === 1) ? " isActive" : ""}`}>  
                 <div className='text-center' onClick={() => {handleClick(1)}}>
                   <span className='iconTest'><img src={SportsFacilities}/></span>
                   <p className='iconTitle'>Sports Facilities</p>
@@ -60,14 +62,14 @@ const LifestyleSection = () => {
               </Col>
             </Row>
             <Row>
-              <Col className={`iconCol${(activeIndex === 2) ? " isActive" : ""}`}>
+              <Col className={`iconCol${(activeIndex === 2 || isMoved === 2) ? " isActive" : ""}`}>
                 <div className='text-center' onClick={() => {handleClick(2)}}>
                   <span className='iconTest'><img src={Kids}/></span>
                   <p className='iconTitle'>Kids Friendly Areas</p>
                   <p className='iconSubText'>Kids Aqua Park<br/>Kids Areas</p>
                 </div>
               </Col>
-              <Col className={`iconCol${(activeIndex === 3) ? " isActive" : ""}`}>
+              <Col className={`iconCol${(activeIndex === 3 || isMoved === 3) ? " isActive" : ""}`}>
               <div className='text-center' onClick={() => {handleClick(3)}}>
                 <span className='iconTest'><img src={CentralPark}/></span>
                 <p className='iconTitle'>Central Park</p>
@@ -77,7 +79,7 @@ const LifestyleSection = () => {
             </Row>    
                 
             <Row>
-              <Col className={`iconCol lastRow${(activeIndex === 4) ? " isActive" : ""}`}>
+              <Col className={`iconCol lastRow${(activeIndex === 4 || isMoved === 4) ? " isActive" : ""}`}>
               
               <div className='text-center' onClick={() => {handleClick(4)}}>
                 <span className='iconTest'><img src={Hotels}/></span>
@@ -85,7 +87,7 @@ const LifestyleSection = () => {
                 <p className='iconSubText'>Far far away, behind<br/>the word mountains</p>
               </div>
               </Col>
-              <Col className={`iconCol lastRow${(activeIndex === 5) ? " isActive" : ""}`}>
+              <Col className={`iconCol lastRow${(activeIndex === 5 || isMoved === 5) ? " isActive" : ""}`}>
               <div className='text-center' onClick={() => {handleClick(5)}}>
                 <span className='iconTest'><img src={Medical}/></span>
                 <p className='iconTitle'>Medical Facilities</p>
@@ -97,7 +99,7 @@ const LifestyleSection = () => {
             </Row>
           </Col>
           <Col lg={6} md={8}     >
-              <ControlledCarousel ref={carouselRef} className='carousel' />
+              <ControlledCarousel ref={carouselRef} className='carousel' setIsMoved={setIsMoved}/>
           </Col>
         </Row>
       </Container>
