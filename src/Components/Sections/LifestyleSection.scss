@@ -10,7 +10,13 @@
   .leftSide {
     .iconCol {
       padding: 20px;
+      cursor: pointer;
     }
+
+    .iconCol:hover {
+      background-color: #9cd9f0;
+    }
+
     .iconTitle {
       font-family: $font-main;
       font-size: 18px;
@@ -53,7 +59,7 @@
 
 
 .isActive {
-  background-color: #cecece;
+  background-color: #9cd9f0;
  
 }
 @media (max-width: 1200px) {
