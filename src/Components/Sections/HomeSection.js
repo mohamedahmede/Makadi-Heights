@@ -10,29 +10,8 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import SubButton from "../UI/SubButton";
 
-//Animation variables
-const container = {
-  hidden: { opacity: 0, scale: 0 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      delayChildren: 0.3,
-      staggerChildren: 0.2,
-    },
-  },
-};
 
-const item = {
-  hidden: { y: 20, opacity: 0, x: 100 },
-  visible: {
-    y: 0,
-    opacity: 1,
-    x: 0,
-  },
-};
-
-const HomeSection = () => {
+const HomeSection = (props) => {
   return (
     <>
       <Container fluid className="homeSectionContainer ">
@@ -43,31 +22,31 @@ const HomeSection = () => {
         </Row>
         <motion.div
           className="container"
-          variants={container}
+          variants={props.container}
           initial="hidden"
           animate="visible"
         >
           <Row className="homeInfo">
             <Col lg={6} className="imageContainer">
               <motion.img
-                variants={item}
+                variants={props.item}
                 src={CouplesImg}
                 className="couplesImg item"
                 alt="Couples Photo"
               />
             </Col>
             <Col md={6}>
-              <motion.h1 variants={item} className="pageTitle">
+              <motion.h1 variants={props.item} className="pageTitle">
                 The place <br />
                 We call home
               </motion.h1>
-              <motion.p variants={item} className="pageTitleSubPara">
+              <motion.p variants={props.item} className="pageTitleSubPara">
                 Makadi Heights is a town built over 3.4 million square meters
                 planned for development, with an elevation reaching 78 meters
                 above sea level guaranteeing magnificent panoramic sea views
                 residential units. Envisioned as a comprehensive town.
               </motion.p>
-              <motion.div variants={item}>
+              <motion.div variants={props.item}>
                 <Row>
                   <Col>
                     <SubButton name="DOWNLOAD BROCHURE" />
