@@ -1,11 +1,14 @@
-import React from 'react'
+import React from "react";
+import { motion } from "framer-motion";
 
-import './SubButton.scss'
+import "./SubButton.scss";
 
 const SubButton = (props) => {
   return (
-    <button className='subButton'>{props.name}</button>
-  )
-}
+    <motion.button className="subButton" whileHover={{ scale: 1.1 }}>
+      {props.name}
+    </motion.button>
+  );
+};
 
-export default SubButton
+export default SubButton;
