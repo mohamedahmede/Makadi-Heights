@@ -27,11 +27,6 @@ const LifestyleSection = () => {
     setIsMoved(index);
   }
 
-  // setInterval(() => {
-  //   let ind = carouselRef.current.getCurrentIndex();
-  //   console.log(ind);
-  //   setActiveIndex(ind)
-  // }, 1500);
 
   return (
     <>

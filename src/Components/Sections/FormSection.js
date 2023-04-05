@@ -1,14 +1,12 @@
 import React, { useRef } from "react";
 import { useFormik } from "formik";
 import { formSchema } from "../../schemas/index";
-import FormImg from "../../images/FormImg.png";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import { TextField } from "@mui/material";
-import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDownOutlined';
-import ExpandMoreOutlinedIcon from '@mui/icons-material/ExpandMoreOutlined';
+
 import ExpandMoreSharpIcon from '@mui/icons-material/ExpandMoreSharp';
 import "./FormSection.scss";
 

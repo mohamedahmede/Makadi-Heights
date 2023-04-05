@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Logo from '../../images/Logo.png';
-import phoneIcon from '../../images/phoneIcon.svg';
 
 import './Header.scss'
 import '../../weather-icons/sass/weather-icons.scss'
-import weatherIcons from '../../weather-icons/weatherIcons.json';
 
 //Font Awesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'

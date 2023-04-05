@@ -2,7 +2,6 @@ import React, { forwardRef, useImperativeHandle, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import './FormModal.scss';
-import SubButton from './SubButton'
 
 const FormModal = forwardRef((props, ref) => {
 
@@ -12,7 +11,7 @@ const FormModal = forwardRef((props, ref) => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  // const handleShow = () => setShow(true);
 
   //Values from form
   const [vals, setvals] = useState([])
