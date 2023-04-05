@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import ControlledCarousel from "../UI/ControlledCarousel";
 import { useInView } from "framer-motion";
-import { motion } from "framer-motion";
+
 
 //Icons
 import CentralPark from "../../images/CarsouleIcons/Central-Park.svg";
@@ -32,9 +32,9 @@ const LifestyleSection = () => {
     setIsMoved(index);
   };
 
-  useEffect(() => {
-    console.log("Element is in view: ", isInView);
-  }, [isInView]);
+  // useEffect(() => {
+  //   console.log("Element is in view: ", isInView);
+  // }, [isInView]);
 
   return (
     <>

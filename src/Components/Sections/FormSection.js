@@ -6,8 +6,9 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import { TextField } from "@mui/material";
+import { useInView } from "framer-motion";
 
-import ExpandMoreSharpIcon from '@mui/icons-material/ExpandMoreSharp';
+import ExpandMoreSharpIcon from "@mui/icons-material/ExpandMoreSharp";
 import "./FormSection.scss";
 
 //Bootstrap
@@ -16,11 +17,13 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import FormModal from "../UI/FormModal";
 
-
-
 const FormSection = () => {
+  //animation
+  const animationRef = useRef(null);
+  const isInView = useInView(animationRef);
 
-  const modalRef= useRef();
+  //modal
+  const modalRef = useRef();
 
   const onSubmit = async (values, actions) => {
     // console.log(values);
@@ -32,8 +35,7 @@ const FormSection = () => {
     actions.resetForm();
     console.log("submitted");
     //send values to the Modal to be displayed
-    modalRef.current.handleShowInParent(values)
-  
+    modalRef.current.handleShowInParent(values);
   };
 
   const {
@@ -61,134 +63,136 @@ const FormSection = () => {
 
   return (
     <>
-  
-      <Container fluid className="formSectionContainer">
-      <FormModal ref={modalRef}/>
-        <Row >
-          <Col lg={4} md={6}  className="imgCol bg-image">
-           
-          </Col>
-          <Col lg={8} md={6} >
-            <form onSubmit={handleSubmit} className="contactForm">
-              <p className="formHeader">
-                Enter your details and our representative <br /> will get back to you
-                shortly
-              </p>
-              <TextField
-                id="yourName"
-                className="inputField"
-                name="yourName"
-                type="text"
-                label="Your Name"
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.yourName}
-                variant="standard"
-                error={touched.yourName && errors.yourName}
-                InputLabelProps={{
-                  className: "inputFieldLabel",
-                }}
-              />
-
-              {errors.yourName && touched.yourName && (
-                <p className="errorMessage">{errors.yourName}</p>
-              )}
-
-              <TextField
-                id="email"
-                className="inputField"
-                name="email"
-                type="email"
-                label="Email ID"
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.email}
-                variant="standard"
-                error={touched.email && errors.email}
-                InputLabelProps={{
-                  className: "inputFieldLabel",
-                }}
-              />
-
-              {errors.email && touched.email && (
-                <p className="errorMessage">{errors.email}</p>
-              )}
-
-              <TextField
-                id="phone"
-                className="inputField"
-                name="phone"
-                type="text"
-                label="Phone number"
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.phone}
-                variant="standard"
-                error={touched.phone && errors.phone}
-                InputLabelProps={{
-                  className: "inputFieldLabel",
-                }}
-              />
-
-              {errors.phone && touched.phone && (
-                <p className="errorMessage">{errors.phone}</p>
-              )}
-
-              <FormControl variant="standard" className="w-100">
-                <InputLabel id="demo-simple-select-standard-label">
-                  Choose your bugdet
-                </InputLabel>
-                <Select
-                  labelId="demo-simple-select-standard-label"
-                  id="budget"
-                  name="budget"
+      <Container fluid className="formSectionContainer" ref={animationRef}>
+        <FormModal ref={modalRef} />
+        <Row>
+          <Col lg={4} md={6} className="imgCol bg-image"></Col>
+          <Col lg={8} md={6}>
+            <div
+              style={{
+                transform: isInView ? "none" : "translateX(-200px)",
+                opacity: isInView ? 1 : 0,
+                transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+              }}
+            >
+              <form onSubmit={handleSubmit} className="contactForm">
+                <p className="formHeader">
+                  Enter your details and our representative <br /> will get back
+                  to you shortly
+                </p>
+                <TextField
+                  id="yourName"
                   className="inputField"
+                  name="yourName"
+                  type="text"
+                  label="Your Name"
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  label="Choose your bugdet"
-                  value={values.budget}
-                  error={touched.budget && errors.budget}
+                  value={values.yourName}
+                  variant="standard"
+                  error={touched.yourName && errors.yourName}
                   InputLabelProps={{
                     className: "inputFieldLabel",
                   }}
-                  IconComponent = {ExpandMoreSharpIcon}
-                  
-                >
-                  <MenuItem value="">
-                    <em>None</em>
-                  </MenuItem>
-                  <MenuItem value={10}>Ten</MenuItem>
-                  <MenuItem value={20}>Twenty</MenuItem>
-                  <MenuItem value={30}>Thirty</MenuItem>
-                </Select>
-              </FormControl>
+                />
 
-              {errors.budget && touched.budget && (
-                <p className="errorMessage">{errors.budget}</p>
-              )}
+                {errors.yourName && touched.yourName && (
+                  <p className="errorMessage">{errors.yourName}</p>
+                )}
 
-              <TextField
-                id="yourName"
-                className="inputField"
-                name="yourMessage"
-                type="text"
-                label="Enter your message"
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.yourMessage}
-                variant="standard"
-                error={touched.yourMessage && errors.yourMessage}
-                InputLabelProps={{
-                  className: "inputFieldLabel",
-                }}
-              />
+                <TextField
+                  id="email"
+                  className="inputField"
+                  name="email"
+                  type="email"
+                  label="Email ID"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.email}
+                  variant="standard"
+                  error={touched.email && errors.email}
+                  InputLabelProps={{
+                    className: "inputFieldLabel",
+                  }}
+                />
 
-              {errors.yourMessage && touched.yourMessage && (
-                <p className="errorMessage">{errors.yourMessage}</p>
-              )}
+                {errors.email && touched.email && (
+                  <p className="errorMessage">{errors.email}</p>
+                )}
 
-              <div className="FAQ">
-                
+                <TextField
+                  id="phone"
+                  className="inputField"
+                  name="phone"
+                  type="text"
+                  label="Phone number"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.phone}
+                  variant="standard"
+                  error={touched.phone && errors.phone}
+                  InputLabelProps={{
+                    className: "inputFieldLabel",
+                  }}
+                />
+
+                {errors.phone && touched.phone && (
+                  <p className="errorMessage">{errors.phone}</p>
+                )}
+
+                <FormControl variant="standard" className="w-100">
+                  <InputLabel id="demo-simple-select-standard-label">
+                    Choose your bugdet
+                  </InputLabel>
+                  <Select
+                    labelId="demo-simple-select-standard-label"
+                    id="budget"
+                    name="budget"
+                    className="inputField"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    label="Choose your bugdet"
+                    value={values.budget}
+                    error={touched.budget && errors.budget}
+                    InputLabelProps={{
+                      className: "inputFieldLabel",
+                    }}
+                    IconComponent={ExpandMoreSharpIcon}
+                  >
+                    <MenuItem value="">
+                      <em>None</em>
+                    </MenuItem>
+                    <MenuItem value={10}>Ten</MenuItem>
+                    <MenuItem value={20}>Twenty</MenuItem>
+                    <MenuItem value={30}>Thirty</MenuItem>
+                  </Select>
+                </FormControl>
+
+                {errors.budget && touched.budget && (
+                  <p className="errorMessage">{errors.budget}</p>
+                )}
+
+                <TextField
+                  id="yourName"
+                  className="inputField"
+                  name="yourMessage"
+                  type="text"
+                  label="Enter your message"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.yourMessage}
+                  variant="standard"
+                  error={touched.yourMessage && errors.yourMessage}
+                  InputLabelProps={{
+                    className: "inputFieldLabel",
+                  }}
+                />
+
+                {errors.yourMessage && touched.yourMessage && (
+                  <p className="errorMessage">{errors.yourMessage}</p>
+                )}
+
+                <div className="FAQ">
                   <input
                     className="FAQCheckbox"
                     name="FAQ"
@@ -196,27 +200,26 @@ const FormSection = () => {
                     onChange={handleChange}
                     value="true"
                     id="FAQ"
-                    
                   />
-                  <label htmlFor="FAQ" >
-                I agree to the processing of personal data
-                </label>
-                 
-              </div>
-              {errors.FAQ && touched.FAQ && (
-                <p className="errorMessage">{errors.FAQ}</p>
-              )}
+                  <label htmlFor="FAQ">
+                    I agree to the processing of personal data
+                  </label>
+                </div>
+                {errors.FAQ && touched.FAQ && (
+                  <p className="errorMessage">{errors.FAQ}</p>
+                )}
 
-              <div>
-                <button
-                  className="formSubmitButton"
-                  disabled={isSubmitting}
-                  type="submit"
-                >
-                  LEAVE A CALL REQUEST
-                </button>
-              </div>
-            </form>
+                <div>
+                  <button
+                    className="formSubmitButton"
+                    disabled={isSubmitting}
+                    type="submit"
+                  >
+                    LEAVE A CALL REQUEST
+                  </button>
+                </div>
+              </form>
+            </div>
           </Col>
         </Row>
       </Container>
