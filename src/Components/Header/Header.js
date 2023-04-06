@@ -30,11 +30,18 @@ const Header = () => {
 
     //Get Weather Data from API
     const fetchData = async () => {
-        const response =  await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=26.96546281915211&lon=33.883077697384714&appid=f1130b3524feefd0549671bf69edc578${tempUnitsCode}`);
-        setWeatherData(response.data);
-        setISUpdated(true);
-        //reset
-        setUnitIsChanged(false);
+
+        try {
+            const response =  await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=26.96546281915211&lon=33.883077697384714&appid=f1130b3524feefd0549671bf69edc578${tempUnitsCode}`);
+            setWeatherData(response.data);
+            setISUpdated(true);
+            //reset
+            setUnitIsChanged(false);
+        } catch (error) {
+            console.log(Error);
+            alert("Something went wrong!")
+        }
+        
     }
 
     //Change icon comming from Api with equivelent one from weather-icons
