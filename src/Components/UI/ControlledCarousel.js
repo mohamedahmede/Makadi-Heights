@@ -78,12 +78,12 @@ useImperativeHandle(ref,()=>({
         </Carousel.Item>
       </Carousel>
     <div className="text-center">
-    <button className={`carouselDots${(currentIndex === 0) ? " activeDot" : ""}`} onClick={() => setCurrentIndex(0)}></button>
-    <button className={`carouselDots${(currentIndex === 1) ? " activeDot" : ""}`} onClick={() =>setCurrentIndex(1)}></button>
-    <button className={`carouselDots${(currentIndex === 2) ? " activeDot" : ""}`} onClick={() =>setCurrentIndex(2)}></button>
-    <button className={`carouselDots${(currentIndex === 3) ? " activeDot" : ""}`} onClick={() =>setCurrentIndex(3)}></button>
-    <button className={`carouselDots${(currentIndex === 4) ? " activeDot" : ""}`} onClick={() =>setCurrentIndex(4)}></button>
-    <button className={`carouselDots${(currentIndex === 5) ? " activeDot" : ""}`} onClick={() =>setCurrentIndex(5)}></button>
+    <button className={`carouselDots${(currentIndex === 0) ? " activeDot" : ""}`} onClick={() => setIndex(0)}></button>
+    <button className={`carouselDots${(currentIndex === 1) ? " activeDot" : ""}`} onClick={() =>setIndex(1)}></button>
+    <button className={`carouselDots${(currentIndex === 2) ? " activeDot" : ""}`} onClick={() =>setIndex(2)}></button>
+    <button className={`carouselDots${(currentIndex === 3) ? " activeDot" : ""}`} onClick={() =>setIndex(3)}></button>
+    <button className={`carouselDots${(currentIndex === 4) ? " activeDot" : ""}`} onClick={() =>setIndex(4)}></button>
+    <button className={`carouselDots${(currentIndex === 5) ? " activeDot" : ""}`} onClick={() =>setIndex(5)}></button>
 
     </div>
       
