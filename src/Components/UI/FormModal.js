@@ -23,7 +23,7 @@ const FormModal = forwardRef((props, ref) => {
     }
 
   }))
-  console.log(vals)
+  // console.log(vals)
 
   return (
     <>

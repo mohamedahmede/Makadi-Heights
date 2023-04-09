@@ -38,7 +38,7 @@ const Header = () => {
             //reset
             setUnitIsChanged(false);
         } catch (error) {
-            console.log(Error);
+            // console.log(Error);
             alert("Something went wrong!")
         }
         
@@ -105,7 +105,7 @@ const Header = () => {
                  className='weatherIcon'
                  
                  /> */}
-                 {console.log(weatherData)}
+                 {/* {console.log(weatherData)} */}
                  <div role="button" className='weatherInfo ' onClick={() => changeUnit()}>
                     <i className={`${newIcon} weatherIcon`}></i>
                     <p className='temperature' >

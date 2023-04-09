@@ -33,7 +33,7 @@ const FormSection = () => {
     document.getElementById("FAQ").checked = false;
     //reset rest of the form
     actions.resetForm();
-    console.log("submitted");
+    // console.log("submitted");
     //send values to the Modal to be displayed
     modalRef.current.handleShowInParent(values);
   };
@@ -59,7 +59,7 @@ const FormSection = () => {
     onSubmit,
   });
 
-  console.log(errors);
+  // console.log(errors);
 
   return (
     <>
@@ -91,7 +91,7 @@ const FormSection = () => {
                   value={values.yourName}
                   variant="standard"
                   error={touched.yourName && errors.yourName}
-                  InputLabelProps={{
+                  inputlabelprops={{
                     className: "inputFieldLabel",
                   }}
                 />
@@ -111,7 +111,7 @@ const FormSection = () => {
                   value={values.email}
                   variant="standard"
                   error={touched.email && errors.email}
-                  InputLabelProps={{
+                  inputlabelprops={{
                     className: "inputFieldLabel",
                   }}
                 />
@@ -131,7 +131,7 @@ const FormSection = () => {
                   value={values.phone}
                   variant="standard"
                   error={touched.phone && errors.phone}
-                  InputLabelProps={{
+                  inputlabelprops={{
                     className: "inputFieldLabel",
                   }}
                 />
@@ -154,7 +154,7 @@ const FormSection = () => {
                     label="Choose your bugdet"
                     value={values.budget}
                     error={touched.budget && errors.budget}
-                    InputLabelProps={{
+                    inputlabelprops={{
                       className: "inputFieldLabel",
                     }}
                     IconComponent={ExpandMoreSharpIcon}
@@ -183,7 +183,7 @@ const FormSection = () => {
                   value={values.yourMessage}
                   variant="standard"
                   error={touched.yourMessage && errors.yourMessage}
-                  InputLabelProps={{
+                  inputlabelprops={{
                     className: "inputFieldLabel",
                   }}
                 />
